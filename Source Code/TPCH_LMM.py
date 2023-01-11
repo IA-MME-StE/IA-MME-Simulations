@@ -195,12 +195,6 @@ print("L1: \n")
 df = pd.DataFrame(newL1)
 print(df)
 """
-print("--------------------------------------------------------------------------------------------------")
-print("\nComputing the size of the Level 1 LMM index for all schemes:\n")
-print("(LMM Level 1) \n")
-print("Total number of labels:", len(newL1['LABEL']))
-print("Total size of values (in blocks of 128 bits):", sum(newL1['LENGTH']))
-
 
 # Setting up LMM for Partially Precomputed Indexing (PPI) - Double Layer (DL) Scheme
 table1 = table_retrieval(all_new_dfs, table)
@@ -221,8 +215,12 @@ df = pd.DataFrame(PPI_DL_L2)
 print(df)
 """
 print("--------------------------------------------------------------------------------------------------")
-print("\nComputing the size of LMM index for Partially Precomputed Indexing (PPI) - Double Layer (DL) Scheme:\n")
-print("(LMM Level 2) \n")
+print("\nComputing the sizes of PP2 indexes:\n")
+print("\n(PP2 Level 1) \n")
+print("Total number of labels:", len(newL1['LABEL']))
+print("Total size of values (in blocks of 128 bits):", sum(newL1['LENGTH']))
+
+print("\n(PP2 Level 2) \n")
 print("Total number of labels:", len(PPI_DL_L2['LABEL']))
 print("Total size of values (in blocks of 128 bits):", sum(PPI_DL_L2['LENGTH']))
 
@@ -240,8 +238,12 @@ df = pd.DataFrame(PPI_TL_L2)
 print(df)
 """
 print("--------------------------------------------------------------------------------------------------")
-print("\nComputing the sizes of LMM indexes for Partially Precomputed Indexing (PPI) - Triple Layer (TL) Scheme:\n")
-print("(LMM Level 2) \n")
+print("\nComputing the sizes of PP3 indexes:\n")
+print("\n(PP3 Level 1) \n")
+print("Total number of labels:", len(newL1['LABEL']))
+print("Total size of values (in blocks of 128 bits):", sum(newL1['LENGTH']))
+
+print("\n(PP3 Level 2) \n")
 print("Total number of labels:", len(PPI_TL_L2['LABEL']))
 print("Total size of values (in blocks of 128 bits):", sum(PPI_TL_L2['LENGTH']))
 """
@@ -250,7 +252,7 @@ print("PPI_TL_L3: \n")
 df = pd.DataFrame(PPI_TL_L3)
 print(df)
 """
-print("\n(LMM Level 3) \n")
+print("\n(PP3 Level 3) \n")
 print("Total number of labels:", len(PPI_TL_L3['LABEL']))
 print("Total size of values (in blocks of 128 bits):", sum(PPI_TL_L3['LENGTH']))
 print("\nRemark: 20 blocks of values in total since each label has 2 values and each value is at most 16 ASCII characters/bytes = 128 bits")
@@ -279,8 +281,12 @@ df = pd.DataFrame(FPI_L2)
 print(df)
 """
 print("--------------------------------------------------------------------------------------------------")
-print("\nComputing the size of LMM index for Fully Precomputed Indexing (FPI) Scheme:\n")
-print("(LMM Level 2) \n")
+print("\nComputing the sizes of FP2 indexes:\n")
+print("\n(FP2 Level 1) \n")
+print("Total number of labels:", len(newL1['LABEL']))
+print("Total size of values (in blocks of 128 bits):", sum(newL1['LENGTH']))
+
+print("\n(FP2 Level 2) \n")
 print("Total number of labels:", len(FPI_L2['LABEL']))
 print("Total size of values (in blocks of 128 bits):", sum(FPI_L2['LENGTH']))
 
