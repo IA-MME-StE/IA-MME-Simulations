@@ -1,5 +1,3 @@
-@@ -1 +1,20 @@
-# IA-MME-Simulations
 # IA-MME-Simulations
 
 This repository contains all the code, data and results used in our simulations for supporting SSE and SQL data types using IA-MME primitives. Simulation results are reported in our paper. 
